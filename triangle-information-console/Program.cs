@@ -4,9 +4,9 @@ namespace triangle_information_console
 {
     class Program
     {
-        public static int sideAInput { get; private set; } = 0;
-        public static int sideBInput { get; private set; } = 0;
-        public static int sideCInput { get; private set; } = 0;
+        public static decimal sideAInput { get; private set; } = 0;
+        public static decimal sideBInput { get; private set; } = 0;
+        public static decimal sideCInput { get; private set; } = 0;
 
         static void Main(string[] args)
         {
@@ -53,24 +53,28 @@ namespace triangle_information_console
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
+            Console.WriteLine();
+            Console.WriteLine("Enter a number (natural or decimal) for each side. As soon as all three fields have valid data in them, calculations will run to let you know information about the triangle.");
+            Console.WriteLine();
             Console.ResetColor();
         }
 
         static void SideInput(string side)
         {
-            int length = 0;
+            decimal length = 0;
+            
 
             while (length == 0)
             {
                 Console.WriteLine("What is the length of side " + side + "?");
                 string input = Console.ReadLine();
 
-                if (!int.TryParse(input, out length))
+                if (!decimal.TryParse(input, out length))
                 {
                     PrintColorMessage(ConsoleColor.Red, "Please enter an actual number.");
                     continue; 
                 }
-                length = Int32.Parse(input);
+                length = decimal.Parse(input);
 
                 switch (side)
                 {
