@@ -19,4 +19,4 @@ I was asked to create an application to tell more information about a triangle. 
 
 ## I created the exact same thing as a web application. Here is the link: [triangle information using react](https://tylercasperson.github.io/triangle-information/)
 
-[github link](https://github.com/tylercasperson/triangle-information)
+## [github link](https://github.com/tylercasperson/triangle-information)
